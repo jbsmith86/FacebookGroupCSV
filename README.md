@@ -12,5 +12,13 @@ Copy your access token to use when running the script. Note: This key will chang
 Running the script
 
 Mac/Linux:
-Download the file
-Open a terminal window and pro
+Download the file CreateCSV.py
+Open a terminal window and change directory to where you downloaded the file. 
+
+Type the following:
+python ./CreateCSV.py
+
+Follow the on screen prompts to enter the url of the Facebook group (you must be a memeber), your API key and a csv filename.
+Your CSV file will be generated and placed in the same directory.
+
+Enjoy!
