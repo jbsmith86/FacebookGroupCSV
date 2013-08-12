@@ -13,13 +13,13 @@ fbgrouplist.sort()
 writeCSV(fbgrouplist, filename)
 
 class FBGroupMember(object):
-    def __init__(self, name, first, last, pic, id, url, middle):
+    def __init__(self, name, first, last, pic, fbid, url, middle):
         self.name = name
         self.first_name = first
         self.middle_name = middle
         self.last_name = last
         self.picture_url = pic
-        self.id = id
+        self.fbid = fbid
         self.fb_url = url
     def __name__(self):
         return self.name
@@ -36,13 +36,13 @@ def createfbgrouplist(jsonres):
         first = jsonres[i]['first_name'].encode("utf8")
         last = jsonres[i]['last_name'].encode("utf8")
         pic = jsonres[i]['picture']['data']['url'].encode("utf8")
-        id = jsonres[i]['id'].encode("utf8")
+        fbid = jsonres[i]['id'].encode("utf8")
         url = jsonres[i]['link'].encode("utf8")
         try:
             middle = jsonres[i]['middle_name'].encode("utf8")
         except KeyError:
             middle = ''
-        list.append(FBGroupMember(name, first, last, pic, id, url, middle))
+        list.append(FBGroupMember(name, first, last, pic, fbid, url, middle))
     return list
 
 def writeCSV(fbgrouplist, filename):
@@ -59,5 +59,5 @@ def writeCSV(fbgrouplist, filename):
 		row.append(j.last_name)
 		row.append(j.fb_url)
 		row.append(j.picture_url)
-		row.append(j.id)
+		row.append(j.fbid)
 		file_writer.writerow(row)
