@@ -18,7 +18,7 @@ Open a terminal window and change directory to where you downloaded the file.
 Type the following:
 python ./CreateCSV.py
 
-Follow the on screen prompts to enter the url of the Facebook group (you must be a memeber), your API key and a csv filename.
+Follow the on screen prompts to enter the url of the Facebook group (you must be a member), your API key and a csv filename.
 Your CSV file will be generated and placed in the same directory.
 
 Enjoy!
